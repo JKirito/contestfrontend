@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100vw;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left,
+.right {
+  width: 100%;
+  height: 100vh;
+}
+.left {
+  background: #323131;
+  display: grid;
+  /* place-content: center; */
+  align-items: center;
+  /* width: 90%; */
+}
+.left_container {
+  height: 600px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gap {
+  margin: 0.5rem 0.9rem;
+}
+input[type="date"] {
+  width: 167px;
+  height: 43px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+input[type="time"] {
+  width: 167px;
+  height: 43px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+.heads {
+  margin: 0.6rem 0;
+  color: white;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  resize: none;
+  padding-left: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="submit"] {
+  width: 178px;
+  height: 54px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.clock_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.clock_flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.flex_end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex_end > span {
+  font-size: 130px;
+}
+.sub {
+  font-size: 28px;
+  line-height: 33px;
+  color: #7c7c7c;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 900px) {
+  .left {
+    width: 100vw;
+  }
+  .right {
+    display: none;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th,
+tr,
+table {
+  border: 1px solid black;
+  margin: 8px;
+  padding: 8px;
+}
+td {
+  margin: 8px;
+  padding: 8px;
 }
